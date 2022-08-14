@@ -1,5 +1,9 @@
 package chap07.section2
 
+interface Switcher {
+    fun on(): String
+}
+
 class SmartPhone(val model: String) {
 
     val cpu = "Exynos"
@@ -14,7 +18,13 @@ class SmartPhone(val model: String) {
         }
 
         val powerStatus = Led("Red")
-        return powerStatus.blink()
+        val powerSwitcher = object : Switcher {
+            override fun on(): String {
+                return powerStatus.blink()
+            }
+        }
+        return powerSwitcher.on()
+//        return powerStatus.blink()
     }
 }
 
