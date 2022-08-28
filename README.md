@@ -13,7 +13,9 @@ Do it! Kotlin Programming 강의를 수강하면서 정리한 내용들입니다
 [6장 - 프로퍼티와 초기화](/note/6장.md)  
 [7장 - 다양한 클래스와 인터페이스](/note/7장.md)  
 [8장 - 제네릭과 배열](/note/8장.md)  
-[9장 - 컬렉션](/note/9장.md)
+[9장 - 컬렉션](/note/9장.md)  
+[10장 - 표준 함수와 파일 입출력](/note/10장.md)
 
 ### 강의 URL
+
 - https://www.udemy.com/course/kotlin-programming-with-android/
