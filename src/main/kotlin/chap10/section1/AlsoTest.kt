@@ -13,7 +13,22 @@ fun main() {
     */
 
     val a = person.also {
+        it.name = "Jason"
         it.skills = "Android"
     }
     println("a: $a, person: $person")
+
+    val b = person.apply {
+        name = "Jason"
+        skills = "Android"
+    }
+
+    println("b: $b, person: $person")
+
+    val c = person.run {
+        name = "Jason"
+        skills = "Android"
+        "Success"
+    }
+    println("c: $c, person: $person")
 }
