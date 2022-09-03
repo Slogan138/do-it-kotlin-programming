@@ -7,7 +7,6 @@ import java.nio.file.StandardOpenOption
 
 fun main() {
     val path = "/Users/jinwoo/hello.txt"
-
     val text = "Hello World, \n 안녕하세요\n"
 
     try {
