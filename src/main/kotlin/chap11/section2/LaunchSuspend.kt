@@ -2,6 +2,7 @@ package chap11.section2
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -27,11 +28,28 @@ private fun worksInSerial(): Job {
     return job
 }
 
+private fun worksInParallel(): Job {
+    val one = GlobalScope.async {
+        doWork1()
+    }
+    val two = GlobalScope.async {
+        doWork2()
+    }
+
+    val job = GlobalScope.launch {
+        val combined = "${one.await()}_${two.await()}"
+        println("Kotlin Combined: $combined")
+    }
+    return job
+}
+
 fun main() = runBlocking {
     val time = measureTimeMillis {
-        val job = worksInSerial()
-        job.join()
+//        val job = worksInSerial()
+//        job.join()
 //    readLine() // 바로 종료하지 않기 위함
+        val job = worksInParallel()
+        job.join()
     }
     println("time: $time")
 }
