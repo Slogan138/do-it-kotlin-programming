@@ -17,6 +17,8 @@ Do it! Kotlin Programming 강의를 수강하면서 정리한 내용들입니다
 [10장 - 표준 함수와 파일 입출력](/note/10장.md)  
 [11장 - 코루틴과 동시성 프로그래밍](/note/11장.md)
 
+안드로이드 관련 내용은 생략합니다.
+
 ### 강의 URL
 
 - https://www.udemy.com/course/kotlin-programming-with-android/
